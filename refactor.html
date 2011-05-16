@@ -59,11 +59,8 @@
     <script> 
     (function(){
  
-		var target = "#isitlaksatime",
-			targetDay = 5,
-			targetHour = 12,
-			yesMessage = "YES!",
-			noMessage =  "No";
+		var targetDay = 5,
+			targetHour = 12;
         
         function countDown() {
  
@@ -75,7 +72,7 @@
             if ( theDay === targetDay ) {
                 
                 if ( theHour === targetHour ) {
-                    message = yesMessage;
+                    message = "YES!";
                 } else if ( (theHour + 2) === targetHour ) {
                     // can't be arsed abstracting these
                     message = "Not yet";
@@ -91,16 +88,16 @@
                         message = "Get ready";
                     }
                 } else {
-                    message = noMessage;
+                    message = "No";
                 }
             
             } else if ( theDay === (targetDay - 1)) {
                 message = "Come back tomorrow";
             } else {
-                message = noMessage;
+                message = "No";
             }
  
-            $(target).text(message);
+            $("#isitlaksatime").text(message);
             
             if (message.length > 10) {
                 $("body").addClass("long");
@@ -113,7 +110,7 @@
  
         $( function() {
             countDown();
-            var timer = setInterval(countDown, 10000);
+            setInterval(countDown, 10000);
         });
  
     })();
