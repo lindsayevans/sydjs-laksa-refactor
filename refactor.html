@@ -59,22 +59,15 @@
     <script> 
     (function(){
  
-        var options = {
-            "yesMessage": "YES!",
-            "noMessage": "No",
-            "target": "#isitlaksatime",
-            "day": 5,         // 5 for friday
-            "hour": 12         // 12 for noon!
-        };
+		var target = "#isitlaksatime",
+			targetDay = 5,
+			targetHour = 12,
+			yesMessage = "YES!",
+			noMessage =  "No";
         
         function countDown() {
  
-            var target = options.target,
-                targetDay = options.day,
-                targetHour = options.hour,
-                yesMessage = options.yesMessage || "Yes",
-                noMessage = options.noMessage || "No",
-                now = new Date(),
+            var now = new Date(),
                 theDay = now.getDay(),
                 theHour = now.getHours(),
                 theMinute = now.getMinutes();
