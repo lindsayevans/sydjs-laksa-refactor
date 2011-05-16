@@ -70,7 +70,7 @@
                 theDay = now.getDay(),
                 theHour = now.getHours(),
                 theMinute = now.getMinutes(),
-				message = message = theDay === targetDay ? theHour === targetHour ? "YES!" : theHour + 2 === targetHour ? "Not yet" : theHour + 1 === targetHour ? theMinute >= 58 ? "Get ready" : theMinute >= 55 ? "Nearly" : theMinute >= 45 ? "Really soon" :  "Soon" : "No" : theDay === targetDay - 1 ? "Come back tomorrow" : "No";
+				message = theDay === targetDay ? theHour === targetHour ? "YES!" : theHour + 2 === targetHour ? "Not yet" : theHour + 1 === targetHour ? theMinute >= 58 ? "Get ready" : theMinute >= 55 ? "Nearly" : theMinute >= 45 ? "Really soon" :  "Soon" : "No" : theDay === targetDay - 1 ? "Come back tomorrow" : "No";
  
             $message.text(message);
             
