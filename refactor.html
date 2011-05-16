@@ -72,14 +72,11 @@
                 theMinute = now.getMinutes(),
 				message = "No";
  
-            if ( theDay === targetDay ) {
+            if ( theDay === (targetDay - 1)) {
+                message = "Come back tomorrow";
+            }else if ( theDay === targetDay ) {
                 
-                if ( theHour === targetHour ) {
-                    message = "YES!";
-                } else if ( (theHour + 2) === targetHour ) {
-                    // can't be arsed abstracting these
-                    message = "Not yet";
-                } else if ( (theHour + 1) === targetHour ) {
+                if ( (theHour + 1) === targetHour ) {
                     message = "Soon";
                     if ( theMinute >= 45) {
                         message = "Really soon";
@@ -90,11 +87,14 @@
                     if ( theMinute >= 58) {
                         message = "Get ready";
                     }
-                }
+                }else if ( (theHour + 2) === targetHour ) {
+                    // can't be arsed abstracting these
+                    message = "Not yet";
+                }else if ( theHour === targetHour ) {
+                    message = "YES!";
+                } 
             
-            } else if ( theDay === (targetDay - 1)) {
-                message = "Come back tomorrow";
-            }
+            } 
  
             $message.text(message);
             
