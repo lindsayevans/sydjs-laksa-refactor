@@ -69,7 +69,8 @@
             var now = new Date(),
                 theDay = now.getDay(),
                 theHour = now.getHours(),
-                theMinute = now.getMinutes();
+                theMinute = now.getMinutes(),
+				message = "No";
  
             if ( theDay === targetDay ) {
                 
@@ -89,14 +90,10 @@
                     if ( theMinute >= 58) {
                         message = "Get ready";
                     }
-                } else {
-                    message = "No";
                 }
             
             } else if ( theDay === (targetDay - 1)) {
                 message = "Come back tomorrow";
-            } else {
-                message = "No";
             }
  
             $message.text(message);
