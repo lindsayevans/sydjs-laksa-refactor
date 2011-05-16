@@ -60,7 +60,9 @@
     (function(){
  
 		var targetDay = 5,
-			targetHour = 12;
+			targetHour = 12,
+			$body = $("body"),
+			$message = $("#isitlaksatime");
         
         function countDown() {
  
@@ -97,9 +99,9 @@
                 message = "No";
             }
  
-            $("#isitlaksatime").text(message);
+            $message.text(message);
             
-            $("body").toggleClass("long", message.length > 10);
+            $body.toggleClass("long", message.length > 10);
             
             //console.log("minute: " + theMinute + " message: " + message)
         }
