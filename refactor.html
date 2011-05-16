@@ -61,8 +61,8 @@
  
 		var targetDay = 5,
 			targetHour = 12,
-			$body = $("body"),
-			$message = $("#isitlaksatime");
+			$body,
+			$message;
         
         function countDown() {
  
@@ -80,6 +80,8 @@
         }
  
         $( function() {
+			$body = $("body");
+			$message = $("#isitlaksatime");
             countDown();
             setInterval(countDown, 10000);
         });
