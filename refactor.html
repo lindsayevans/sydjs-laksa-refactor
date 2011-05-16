@@ -99,11 +99,7 @@
  
             $("#isitlaksatime").text(message);
             
-            if (message.length > 10) {
-                $("body").addClass("long");
-            } else {
-                $("body").removeClass("long");
-            }
+            $("body").toggleClass("long", message.length > 10);
             
             //console.log("minute: " + theMinute + " message: " + message)
         }
