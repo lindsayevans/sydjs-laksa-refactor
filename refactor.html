@@ -72,7 +72,9 @@
                 theMinute = now.getMinutes(),
 				message = "No";
  
-            if ( theDay === (targetDay - 1)) {
+            if ( theDay < (targetDay - 2)) {
+							// Do nothing
+            }else if ( theDay === (targetDay - 1)) {
                 message = "Come back tomorrow";
             }else if ( theDay === targetDay ) {
                 
