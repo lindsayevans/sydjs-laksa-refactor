@@ -55,14 +55,14 @@
  
     <!-- Sure it's overkill, but it's probably cached already... --> 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script> 
-	<script>!window.jQuery && document.write('<script src="js/jquery-1.6.0.min.js"><\/script>')</script>
+		<script>!window.jQuery && document.write('<script src="js/jquery-1.6.0.min.js"><\/script>')</script>
     <script> 
     (function(){
  
-		var targetDay = 5,
-			targetHour = 12,
-			$body,
-			$message;
+        var targetDay = 5,
+            targetHour = 12,
+            $body,
+            $message;
         
         function countDown() {
  
@@ -70,10 +70,10 @@
                 theDay = now.getDay(),
                 theHour = now.getHours(),
                 theMinute = now.getMinutes(),
-				message = "No";
+                message = "No";
  
             if ( theDay < (targetDay - 2)) {
-							// Do nothing
+                // Do nothing
             }else if ( theDay === (targetDay - 1)) {
                 message = "Come back tomorrow";
             }else if ( theDay === targetDay ) {
@@ -106,8 +106,8 @@
         }
  
         $( function() {
-			$body = $("body");
-			$message = $("#isitlaksatime");
+            $body = $("body");
+            $message = $("#isitlaksatime");
             countDown();
             setInterval(countDown, 10000);
         });
